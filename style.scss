@@ -135,6 +135,8 @@ section {
     left: 0;
     width: 100%;
     padding: 1rem 3%;
+    transform: scale(0);
+    transform-origin: top right;
     background: var(--bg-color);
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0.5rem solid rgba(0, 0, 0, 0.2);
@@ -148,5 +150,8 @@ section {
         }
       }
     }
+  }.navbar.active {
+    transform: scale(1);
+    transition: 0.2s linear;
   }
 }
