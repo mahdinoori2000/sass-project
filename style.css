@@ -1,0 +1,152 @@
+/* FONTS */
+@import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #e03131;
+  color: var(--text-color);
+}
+
+section {
+  background: var(--second-bg-color);
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+.logo span {
+  color: #e03131;
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  margin-left: 4rem;
+  transition: 0.3s;
+  position: relative;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  background: var(--main-color);
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: var(--main-color);
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.home-content p {
+  color: #8c9bb6;
+}
+.home-content button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e03131;
+  border-radius: 5px;
+  color: #fff;
+}
+
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    transform: scale(0);
+    transform-origin: top right;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem solid rgba(0, 0, 0, 0.2);
+   
+  }
+  .navbar.active {
+    transform: scale(1);
+    transition: 0.2s linear;
+  }
+  
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .navbar a:hover::after {
+    width: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

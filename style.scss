@@ -1,0 +1,151 @@
+$color_1: var(--text-color);
+$color_2: #e03131;
+$color_3: var(--main-color);
+$color_4: #8c9bb6;
+$color_5: #fff;
+$font-family_1: 'Poppins', sans-serif;
+
+/* FONTS */
+@import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	font-family: $font-family_1;
+}
+:root {
+	--bg-color: #1f242d;
+	--second-bg-color: #323946;
+	--text-color: #fff;
+	--main-color: #0ef;
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+body {
+	background: #e03131;
+	color: $color_1;
+}
+section {
+	background: var(--second-bg-color);
+	min-height: 100vh;
+	padding: 10rem 9% 2rem;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 2rem 9%;
+	background: var(--bg-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+.logo {
+	font-size: 2.5rem;
+	color: $color_1;
+	font-weight: 600;
+	cursor: default;
+	span {
+		color: $color_2;
+	}
+}
+.navbar {
+	a {
+		color: $color_1;
+		font-size: 1.7rem;
+		margin-left: 4rem;
+		transition: .3s;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			height: 3px;
+			width: 0;
+			left: 0;
+			bottom: -10px;
+			background: var(--main-color);
+			transition: 0.3s;
+		}
+		&:hover {
+			color: $color_3;
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.navbar.active {
+    transform: scale(1);
+    transition: 0.2s linear;
+  }
+#menu-icon {
+	font-size: 3.6rem;
+	color: $color_1;
+	display: none;
+}
+.home {
+	display: flex;
+	align-items: center;
+}
+.home-content {
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 700;
+	}
+	p {
+		color: $color_4;
+	}
+	button {
+		margin-top: 10px;
+		padding: 10px;
+		background: #e03131;
+		border-radius: 5px;
+		color: $color_5;
+	}
+}
+@media (max-width:1200px) {
+	html {
+		font-size: 55%;
+	}
+}
+@media (max-width:991px) {
+	.header {
+		padding: 2rem 3%;
+	}
+	section {
+		padding: 10rem 3% 2rem;
+	}
+}
+@media (max-width:768px) {
+	#menu-icon {
+		display: block;
+	}
+	.navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 1rem 3%;
+		background: var(--bg-color);
+		border-top: .1rem solid rgba(0,0,0, 0.2);
+		box-shadow: .5rem solid rgba(0,0,0, 0.2);
+		a {
+			display: block;
+			font-size: 2rem;
+			margin: 3rem 0;
+			&:hover {
+				&::after {
+					width: 0;
+				}
+			}
+		}
+	}
+}
