@@ -1,0 +1,37 @@
+.container {
+  background-color: var(--second-bg-color);
+  margin-bottom: 128px;
+}
+.skill-title {
+  margin: auto;
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  color: $color_2;
+
+  span {
+    padding-bottom: 5px;
+    border-bottom: 3px solid $color_2;
+  }
+}
+.skill-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 30px;
+  .skill-element {
+    width: 250px;
+    background-color: var(--bg-color);
+    padding: 20px;
+    img {
+      width: 32px;
+      margin-bottom: 10px;
+      margin-left: -3px;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,5 +1,44 @@
 /* FONTS */
 @import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap";
+.container {
+  background-color: var(--second-bg-color);
+  margin-bottom: 128px;
+}
+
+.skill-title {
+  margin: auto;
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #e03131;
+}
+.skill-title span {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #e03131;
+}
+
+.skill-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.skill-container .skill-element {
+  width: 250px;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+.skill-container .skill-element img {
+  width: 32px;
+  margin-bottom: 10px;
+  margin-left: -3px;
+}
+.skill-container .skill-element h4 {
+  margin-bottom: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +63,7 @@ html {
 }
 
 body {
-  background: #e03131;
+  background: var(--second-bg-color);
   color: var(--text-color);
 }
 
@@ -79,6 +118,11 @@ section {
   width: 100%;
 }
 
+.navbar.active {
+  transform: scale(1);
+  transition: 0.2s linear;
+}
+
 #menu-icon {
   font-size: 3.6rem;
   color: var(--text-color);
@@ -105,7 +149,6 @@ section {
   color: #fff;
 }
 
-
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -130,17 +173,9 @@ section {
     width: 100%;
     padding: 1rem 3%;
     background: var(--bg-color);
-    transform: scale(0);
-    transform-origin: top right;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0.5rem solid rgba(0, 0, 0, 0.2);
-   
   }
-  .navbar.active {
-    transform: scale(1);
-    transition: 0.2s linear;
-  }
-  
   .navbar a {
     display: block;
     font-size: 2rem;
