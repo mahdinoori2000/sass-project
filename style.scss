@@ -8,6 +8,7 @@ $font-family_1: "Poppins", sans-serif;
 /* FONTS */
 @import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap";
 @import "_skills";
+@import "_contact";
 
 * {
   margin: 0;
@@ -48,6 +49,7 @@ section {
   align-items: center;
   z-index: 100;
 }
+
 .logo {
   font-size: 2.5rem;
   color: $color_1;
@@ -120,6 +122,9 @@ section {
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
+    i {
+      cursor: pointer;
+    }
   }
   section {
     padding: 10rem 3% 2rem;
@@ -150,7 +155,8 @@ section {
         }
       }
     }
-  }.navbar.active {
+  }
+  .navbar.active {
     transform: scale(1);
     transition: 0.2s linear;
   }

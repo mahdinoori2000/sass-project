@@ -1,10 +1,5 @@
 /* FONTS */
 @import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap";
-.container {
-  background-color: var(--second-bg-color);
-  margin-bottom: 128px;
-}
-
 .skill-title {
   margin: auto;
   margin-bottom: 32px;
@@ -37,6 +32,46 @@
 }
 .skill-container .skill-element h4 {
   margin-bottom: 5px;
+}
+
+.secondary-header {
+  color: #e03131;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.email-input,
+.messege-input {
+  display: block;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  padding: 10px;
+  color: var(--text-color);
+}
+.email-input::-moz-placeholder, .messege-input::-moz-placeholder {
+  font-size: 14px;
+}
+.email-input::placeholder,
+.messege-input::placeholder {
+  font-size: 14px;
+}
+
+.submit {
+  background-color: #e03131;
+  color: var(--bg-color);
+  padding: 7px 14px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-left: 245px;
+}
+.submit img {
+  width: 16px;
+  padding-top: 2px;
 }
 
 * {
@@ -157,6 +192,9 @@ section {
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
+  }
+  .header i {
+    cursor: pointer;
   }
   section {
     padding: 10rem 3% 2rem;

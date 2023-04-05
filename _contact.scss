@@ -1,0 +1,35 @@
+.secondary-header {
+  color: $color_2;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.email-input,
+.messege-input {
+  display: block;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  padding: 10px;
+  color: $color_1;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.submit {
+  background-color: $color_2;
+  color: var(--bg-color);
+  padding: 7px 14px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-left: 245px;
+  img {
+    width: 16px;
+    padding-top: 2px;
+  }
+}
